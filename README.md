@@ -69,6 +69,8 @@
     > <a href="https://laravel.com/docs/8.x"><img src="assets/xampp.svg" width= "40" alt="Link â pagina de download Ubuntu Server 22.04"></a>
 ---
 
+> # Criação Projeto
+
 ## Passo a passo e utilização das ferramentas.:
 
 * ### Primeiro iniciamos o projeto com o framework laravel utilizando o composer com a seguinte linha de código:
@@ -95,6 +97,8 @@ ls
 cd (nome do projeto)
 ```
 ---
+
+> # Controller
 
 ### Após a criação do projeto, vira os passos para criar o sistema de login dentro do projeto. Comece criando o controller.
 
@@ -150,6 +154,8 @@ php artisan serve
 #### Seguindo este ip de loop seremos redirecionados a pagina da view
 ---
 
+> # MySQL
+
 ## Passos para realizar o sistema de login
 
 * #### Para construir e usarmos o login, iremos realiza-lo com usuarios dentro do banco de dados, para isso utilizaremos o XAMPP que possui o banco de dados MySQL, após abri-lo e ligar o banco de dados MySQL
@@ -175,9 +181,14 @@ php artisan serve
 
 
 #### Após configurar suas tabelas, campos e tuplas, precisaremos de uma pagina (blade.php) que possua um formulario para realizar este login.
+
+> # Formulario
+
 ### Para o meu login estarei utilizando este seguinte formulario:
 
 <img src="assets/pagLogin.png" width= "" alt="Link de documentação e aulas MySQL">
+
+
 
 #### Após a criação e configuração do formulario. OBS: Preciso que o "name" das inputs sejam setados
 
@@ -185,15 +196,46 @@ php artisan serve
 
 ---
 
->  ## Resumo
+>  # Resumo
 
-#### Perceba que o formulario possui uma ação que aponta para uma rota, esta rota sera criada dentro do LoginController com uma função|function e dentro da mesma sera criado a autenticação dos valores dentro das inputs e sera comparado com os dados dentro do banco de dados, caso ambas informações sejam iguais, a pessoa realizará o login.
+#### Perceba que o formulario possui uma ação, esta ação sera ativada ao clicar no botão onde há "submit" que aponta para uma rota dentro de web.php, esta rota sera criada dentro do LoginController com uma função|function e dentro da mesma sera criado a autenticação dos valores dentro das inputs e sera comparado com os dados dentro do banco de dados, caso ambas informações sejam iguais, a pessoa realizará o login.
 
 ---
 
-> ## Criação Model
+> # Criação Model
 
-###
+### Aqui damos inicio aos passos finais. Agora vem a criação dos models para realizar a representação das tabelas dentro do banco de dados.
+
+#### Na aplicação de login apresentada iremos criar um login tanto para os alunos da academia quanto para os funcionarios da mesma, sendo assim devemos possuir 2 tabelas, uma para alunos e outra para funcionario e para realizar o login de ambos, iremos utilizar a tabela de usuarios onde possui as informações para login das mesmas
+
+> # Tabelas
+
+## Tabela Aluno
+
+> <img src="assets/tblAluno.png" width= "" alt="Link de documentação e aulas MySQL">
+
+---
+
+## Tabela Funcionarios
+
+> <img src="assets/tblFuncionario.png" width= "" alt="Link de documentação e aulas MySQL">
+
+## Tabela Usuario
+
+> <img src="assets/tblUsuario.png" width= "" alt="Link de documentação e aulas MySQL">
+
+
+### Demostrado então as tabelas iremos aos models. Para a criação dos models segue o comando:
+
+```
+php artisan make:model (Nome do model)
+```
+
+### Crie um para cada tabela (Aluno, Funcionario e Usuario). Os models serão encontrados em App\Models.
+
+> # Configuração de Model
+
+
 
 ---
 ## Conclusão
