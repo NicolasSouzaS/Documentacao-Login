@@ -1,9 +1,9 @@
 >  # Desenvolvimento de Atividade e Documentação Passo a Passo para Autenticação em Aplicações Laravel e PHP
 #
->  ##  Introdução
+>  #  Introdução
 *  ### Esta atividade visa aprofundar e consolidar o conhecimento adquirido até o momento no domínio do processo de login em aplicações web, especialmente utilizando as tecnologias Laravel e PHP. O objetivo principal é fornecer uma oportunidade prática para os participantes desenvolverem habilidades na criação de guias de usuário detalhados e na elaboração de mapas da aplicação, contribuindo assim para uma compreensão mais holística e efetiva do desenvolvimento de software.
 #
-> ## Objetivos Específicos:
+> # Objetivos Específicos:
 
 * #### 1° Consolidação do Conhecimento: Reforçar e aplicar os conceitos aprendidos sobre autenticação em sistemas web, utilizando as melhores práticas recomendadas pela comunidade Laravel e PHP.
 
@@ -16,7 +16,7 @@
 ---
 
 
-> ## Download e instalações de ferramentas utilizadas.:
+> # Download e instalações de ferramentas utilizadas.:
 
 ## Composer       <a href="https://getcomposer.org/download/"><img src="assets/composer.svg" width = "20" alt="Link â pagina de download Composer"></a>
 
