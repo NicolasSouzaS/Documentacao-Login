@@ -81,7 +81,7 @@
 
 ```
 composer create-project --prefer-dist laravel/laravel nome-do-projeto
-````
+```
 
 #### Após a criação do projeto laravel via composer, certifique-se que esta dentro da pasta do projeto, caso não saiba digiteo seguinte comando:
 
@@ -112,6 +112,21 @@ cd (nome do projeto)
 <img src="assets/Exmplo view.png" width= "300" alt="Link â pagina de download Ubuntu Server 22.04">
 
 #### No exemplo acima, possuo um controller com nome de HomeController, este controller possui uma função e esta função retorna uma view e esta view aponta para um caminho que se encontra esta pagina.
+
+* #### Criação do controller. OBS Sugiro que o nome do controller seja LoginController:
+
+```
+php artisan make:controller (Nome do controller).
+```
+
+#### Após a criação e a configuração do controller que se encontra dentro da pasta App\Http\Controllers
+
+#### Crie uma view que retorne uma pagina e esta pagina peço que seja construida um formulario. Esta pagina deve ser criada dentro resources/views. Vai do seu interesse de criar uma pasta dentro dela ou somente criar o arquivo a dentro, porém, dentro da function do controller deve apenas apontar o nome do arquivo exemplo.:
+
+
+<img src="assets/viewLogin.png" width= "400" alt="Link â pagina de download Ubuntu Server 22.04">
+
+
 ---
 
 <img src="assets/route.png" width= "800" alt="Link â pagina de download Ubuntu Server 22.04">
@@ -149,15 +164,36 @@ php artisan serve
 
 * ### Link download direto à pagina.:
 
-    > <a href="https://dev.mysql.com/downloads/workbench/"><img src="assets/mysql-workbench.svg" width= "40" alt="Link â pagina de download Ubuntu Server 22.04"></a>
+    > <a href="https://dev.mysql.com/downloads/workbench/"><img src="assets/mysql-workbench.svg" width= "40" alt="Link à pagina de download WorkBench"></a>
 
 ### Documentação para criação do banco, tabelas e tuplas (inserts).:
 
 * ### Link documentação MySQL.:
 
-    > <a href="https://www.w3schools.com/mysql/mysql_create_table.asp"><img src="assets/mysql-workbench.svg" width= "40" alt="Link â pagina de download Ubuntu Server 22.04"></a>
+    > <a href="https://www.w3schools.com/mysql/mysql_create_table.asp"><img src="assets/mysql-workbench.svg" width= "40" alt="Link de documentação e aulas MySQL"></a>
     #### Junto de passo a passo e aulas
 
+
+#### Após configurar suas tabelas, campos e tuplas, precisaremos de uma pagina (blade.php) que possua um formulario para realizar este login.
+### Para o meu login estarei utilizando este seguinte formulario:
+
+<img src="assets/pagLogin.png" width= "" alt="Link de documentação e aulas MySQL">
+
+#### Após a criação e configuração do formulario. OBS: Preciso que o "name" das inputs sejam setados
+
+<img src="assets/names.png" width= "" alt="Link de documentação e aulas MySQL">
+
+---
+
+>  ## Resumo
+
+#### Perceba que o formulario possui uma ação que aponta para uma rota, esta rota sera criada dentro do LoginController com uma função|function e dentro da mesma sera criado a autenticação dos valores dentro das inputs e sera comparado com os dados dentro do banco de dados, caso ambas informações sejam iguais, a pessoa realizará o login.
+
+---
+
+> ## Criação Model
+
+###
 
 ---
 ## Conclusão
