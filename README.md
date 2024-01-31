@@ -48,10 +48,10 @@
 
 
 ---
-## Laravel <a href="https://laravel.com/docs/8.x"><img src="assets/laravel.svg" width= "20" alt="Link â pagina de download Ubuntu Server 22.04"></a>
+# Laravel <a href="https://laravel.com/docs/8.x"><img src="assets/laravel.svg" width= "20" alt="Link â pagina de download Ubuntu Server 22.04"></a>
 * ### Documentação Laravel para duvidas e obtenção do mesmo. OBS(Versão utilizada: 8.x)
 > <a href="https://laravel.com/docs/8.x"><img src="assets/laravelDoc.png" alt="Tutorial install Laravel 8.X"></a>
-* ### Link download direto à pagina.:
+* ### Link documentação direto à pagina.:
 
     > <a href="https://laravel.com/docs/8.x"><img src="assets/laravel.svg" width= "50" alt="Link â pagina de download Ubuntu Server 22.04"></a>
 
