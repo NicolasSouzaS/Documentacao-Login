@@ -235,7 +235,87 @@ php artisan make:model (Nome do model)
 
 > # Configuração de Model
 
+## Como dito antes, o model é uma classe que representa uma tabela dentro do banco de dados (MySQL), para realizarmos a autenticação de usuários precisamos configurar nossos models para que conseguimos realizar a comparação dentro do banco de dados.
 
+
+> ## Usuario
+
+ ## <img src="assets/modelUsuario.png" width= "" alt="Link de documentação e aulas MySQL">
+
+ > ## Aluno
+
+ ## <img src="assets/modelAluno.png" width= "1000px" alt="Link de documentação e aulas MySQL">
+
+ > ## Funcionario
+
+ <img src="assets/modelFuncionario.png" width= "1000px" alt="Link de documentação e aulas MySQL">
+
+ ---
+> # Configuração de rota e controller
+
+### Como dito antes, o formulario de login possui um "route" que esta criada no LoginController e setada em web.php
+
+> ## Configuração LoginController
+
+ ### Função view | pagina com formulario
+
+  <img src="assets/functionView.png" width= "" alt="Link de documentação e aulas MySQL">
+
+ ### Função de autenticação
+
+<img src="assets/functionAutencicao.png" width= "" alt="Link de documentação e aulas MySQL">
+
+### Explicação function autenticar
+
+#### Variavel $regras é usada para forçar o usuário a escrever informações dentro das inputs para que o mesmo possa requisitar o login, assim não será executado o login caso os campos estejam vazios
+
+#### Variavel $msg é utilizada para informar esta mensagem ao usuário, os campos são obrigatórios
+
+#### As variaveis $email e $senha recebera através do metodo get os dados que o usuário preencheu dentro das inputs. OBS: o get receberá os dados através das inputs com os names setadas as inputs, exemplo:
+
+<img src="assets/namesForm.png" width= "" alt="Link de documentação e aulas MySQL">
 
 ---
-## Conclusão
+
+#### Continuando a explicação sobre a function de autenticação, após as variaveis $email e $senha receberem os valores, criamos uma variavel que se torna um objeto ($usuario) este objeto fara requisição dentro do banco de dados com base no email informado pelo usuario.
+
+
+<img src="assets/requisitando.png" width= "" alt="Link de documentação e aulas MySQL">
+
+---
+
+#### Se o usuário não for encontrado, uma mensagem de erro é adicionada e o usuário é redirecionado de volta à página de login. Em seguida, as senhas são comparadas, e se não corresponderem, outra mensagem de erro é adicionada.
+
+<img src="assets/msg.png" width= "" alt="Link de documentação e aulas MySQL">
+
+---
+
+#### O tipo de usuário é obtido usando a propriedade tipo_usuario. Dependendo do tipo de usuário, diferentes ações podem ser realizadas. Neste caso, se for um objeto do tipo Aluno, ele será impresso; se for um objeto do tipo Funcionario, também será impresso; caso contrário, "Deu ruim" será impresso.
+
+<img src="assets/modelUsuario.png" width= "" alt="Link de documentação e aulas MySQL">
+
+<img src="assets/tipoUser.png" width= "" alt="Link de documentação e aulas MySQL">
+
+---
+
+### Para que tudo seja executado, devemos acionar a rota de LoginController chamando pela função de autenticar. Daí partimos para o web.php
+
+<img src="assets/web.php.png" width= "" alt="Link de documentação e aulas MySQL">
+
+#### Damos um nome a esta rota post "/login" e setamos a mesma ao formulario
+
+<img src="assets/routeLogin.png" width= "" alt="Link de documentação e aulas MySQL">
+
+#### Após o formulario der submit com o botão de Login, a rota é acionada do method POST que chamara a função de autenticar e assim fazendo com que a autenticação seja realizada caso o email e senha estejam dentro do banco de dados.
+
+---
+> # Conclusão
+#### Após o usuario acionar o botão "submit" o formulario que possui a rota, a function entrará em ação e fara um get através dos names do formulario e passara para as variaveis "email" e "senha". o objeto de usuario fara uma requisição no banco seguindo o email informado, caso ocorra tudo bem, retornara os dados encontrados no banco seguindo o email informado
+
+> ## Array de dados do Aluno
+
+<img src="assets/arrayAluno.png" width= "" alt="Link de documentação e aulas MySQL">
+
+> ## Array de dados do Funcionario
+
+<img src="assets/arrayFuncionario.png" width= "" alt="Link de documentação e aulas MySQL">
